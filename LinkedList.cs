@@ -91,7 +91,7 @@
             while(i < position - 1)
             {
                 p = p.next;
-                i = i = 1;
+                i = i + 1;
             }
 
             newest.next = p.next;

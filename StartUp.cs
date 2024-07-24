@@ -78,10 +78,10 @@ class Executions
         l.addLast(3);
         l.display();
         Console.WriteLine("Size: " + l.length());
-        l.addFirst(15);
+        l.addAny(20, 3);
         l.display();
         Console.WriteLine("Size: " + l.length());
-        l.addFirst(25);
+        l.addAny(40, 5);
         l.display();
         Console.WriteLine("Size: " + l.length());
     }
