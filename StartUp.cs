@@ -78,10 +78,8 @@ class Executions
         l.addLast(3);
         l.display();
         Console.WriteLine("Size: " + l.length());
-        l.addAny(20, 3);
-        l.display();
-        Console.WriteLine("Size: " + l.length());
-        l.addAny(40, 5);
+        int element = l.removeFirst();
+        Console.WriteLine("Removed element: " + element);
         l.display();
         Console.WriteLine("Size: " + l.length());
     }

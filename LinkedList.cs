@@ -98,5 +98,26 @@
             p.next = newest;
             size = size + 1;
         }
+
+        public int removeFirst()
+        {
+            if (isEmpty())
+            {
+                Console.WriteLine("List is empty!");
+                return -1;
+            }
+            else
+            {
+                int e = head.element;
+                head = head.next;
+                size = size - 1;
+                if (isEmpty())
+                {
+                    tail = null;
+                }
+
+                return e;
+            }
+        }
     }
 }
