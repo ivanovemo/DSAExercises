@@ -146,6 +146,11 @@ namespace LearnDSAlgorithms
         }
         public int removeAny(int position)
         {
+            if (position <= 0 || position >= size - 1)
+            {
+                Console.WriteLine("Invalid position!");
+                return -1;
+            }
             Node p = head;
             int i = 1;
             while (i < position - 1)
