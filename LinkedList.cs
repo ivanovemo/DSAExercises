@@ -1,4 +1,6 @@
-﻿namespace LearnDSAlgorithms
+﻿using System.Diagnostics;
+
+namespace LearnDSAlgorithms
 {
     public class Node
     {
@@ -118,6 +120,29 @@
 
                 return e;
             }
+        }
+
+        public int removeLast()
+        {
+            if (isEmpty())
+            {
+                Console.WriteLine("List is empty!");
+                return -1;
+            }
+
+            Node p = head;
+            int i = 1;
+            while(i < size - 1)
+            {
+                p = p.next;
+                i += 1;
+            }
+            tail = p;
+            p = p.next;
+            int e = p.element;
+            tail.next = null;
+            size -= 1;
+            return e;
         }
     }
 }
