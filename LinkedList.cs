@@ -163,5 +163,23 @@ namespace LearnDSAlgorithms
             size -= 1;
             return e;
         }
+
+        public int search(int key)
+        {
+            Node p = head;
+            int index = 0;
+            while(p != null)
+            {
+                if (p.element == key)
+                {
+                    return index;
+                }
+
+                p = p.next;
+                index++;
+            }
+            Console.WriteLine("The element wasn't found!");
+            return -1;
+        }
     }
 }
