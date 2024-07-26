@@ -181,5 +181,37 @@ namespace LearnDSAlgorithms
             Console.WriteLine("The element wasn't found!");
             return -1;
         }
+
+        public void insertSorted(int e)
+        {
+            Node newest = new Node(e, null);
+            if (isEmpty())
+            {
+                head = newest;
+            }
+            else
+            {
+                Node p = head;
+                Node q = head;
+                while (p != null && p.element < e)
+                {
+                    q = p;
+                    p = q.next;
+                }
+
+                if (p == head)
+                {
+                    newest.next = head;
+                    head = newest;
+                }
+                else
+                {
+                    newest.next = q.next;
+                    q.next = newest;
+                }
+            }
+
+            size++;
+        }
     }
 }

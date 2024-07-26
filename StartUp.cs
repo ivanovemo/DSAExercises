@@ -71,13 +71,11 @@ class Executions
         //s.display(C, 6);
 
         LinkedList l = new LinkedList();
-        l.addLast(7);
-        l.addLast(4);
-        l.addLast(12);
-        l.addLast(8);
-        l.addLast(3);
+        l.insertSorted(7);
+        l.insertSorted(4);
+        l.insertSorted(12);
+        l.insertSorted(8);
+        l.insertSorted(3);
         l.display();
-        int elementIndex = l.search(4);
-        Console.WriteLine("Index: " + elementIndex);
     }
 }
