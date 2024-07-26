@@ -56,7 +56,7 @@ namespace LearnDSAlgorithms
         public void display()
         {
             Node p = head;
-            while(p != null)
+            while (p != null)
             {
                 Console.Write(p.element + " -> ");
                 p = p.next;
@@ -82,7 +82,7 @@ namespace LearnDSAlgorithms
 
         public void addAny(int e, int position)
         {
-            if(position <= 0 || position >= size)
+            if (position <= 0 || position >= size)
             {
                 Console.WriteLine("Invalid Position");
                 return;
@@ -90,7 +90,7 @@ namespace LearnDSAlgorithms
             Node newest = new Node(e, null);
             Node p = head;
             int i = 1;
-            while(i < position - 1)
+            while (i < position - 1)
             {
                 p = p.next;
                 i = i + 1;
@@ -132,7 +132,7 @@ namespace LearnDSAlgorithms
 
             Node p = head;
             int i = 1;
-            while(i < size - 1)
+            while (i < size - 1)
             {
                 p = p.next;
                 i += 1;
@@ -141,6 +141,20 @@ namespace LearnDSAlgorithms
             p = p.next;
             int e = p.element;
             tail.next = null;
+            size -= 1;
+            return e;
+        }
+        public int removeAny(int position)
+        {
+            Node p = head;
+            int i = 1;
+            while (i < position - 1)
+            {
+                p = p.next;
+                i++;
+            }
+            int e = p.next.element;
+            p.next = p.next.next;
             size -= 1;
             return e;
         }
