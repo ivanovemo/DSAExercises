@@ -70,12 +70,27 @@ class Executions
         //Console.WriteLine("Sorted array: ");
         //s.display(C, 6);
 
-        LinkedList l = new LinkedList();
-        l.insertSorted(7);
-        l.insertSorted(4);
-        l.insertSorted(12);
-        l.insertSorted(8);
-        l.insertSorted(3);
-        l.display();
+        //LinkedList l = new LinkedList();
+        //l.insertSorted(7);
+        //l.insertSorted(4);
+        //l.insertSorted(12);
+        //l.insertSorted(8);
+        //l.insertSorted(3);
+        //l.display();
+
+        CircularLinkedList cl = new CircularLinkedList();
+        cl.addLast(7);
+        cl.addLast(4);
+        cl.addLast(12);
+        cl.addLast(8);
+        cl.addLast(3);
+        cl.display();
+        Console.WriteLine("Size: " + cl.length());
+        cl.addFirst(30);
+        cl.display();
+        Console.WriteLine("Size: " + cl.length());
+        cl.addFirst(40);
+        cl.display();
+        Console.WriteLine("Size: " + cl.length());
     }
 }
