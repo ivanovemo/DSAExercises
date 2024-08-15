@@ -1,10 +1,15 @@
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore NuGet package files
+*.nupkg
+*.nuget
+
+# Ignore Visual Studio/VSCode related files
 *.dll
-*.exe
-*.obj
-*.log
-
-*.tmp
-*.temp
-
-/bin
-/obj
+*.pdb
+*.cache
+*.nuget.cache
+*.assets.json
+*.csproj.nuget.*
