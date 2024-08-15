@@ -80,6 +80,26 @@
             size += 1;
         }
 
+        public int removeFirst() {
+            if (isEmpty())
+            {
+                Console.WriteLine("Circular list is empty!");
+                return -1;
+            }
+
+            int e = head.element;
+            tail.next = head.next;
+            head = head.next;
+            size -= 1;
+            if (isEmpty())
+            {
+                head = null!;
+                tail = null!;
+            }
+
+            return e;
+        }
+
         public void display()
         {
             Node p = head;
