@@ -92,9 +92,17 @@ class Executions
         cl.addAny(30, 5);
         cl.display();
         Console.WriteLine("Size: " + cl.length());
-        int removedElement = cl.removeFirst();
+        int firstRemovedElement = cl.removeFirst();
         cl.display();
+        Console.WriteLine("Removed element: " + firstRemovedElement);
         Console.WriteLine("Size: " + cl.length());
+        int lastRemovedElement = cl.removeLast();
+        cl.display();
+        Console.WriteLine("Removed element: " + lastRemovedElement);
+        Console.WriteLine("Size: " + cl.length());
+        int removedElement = cl.removeAny(3);
+        cl.display();
         Console.WriteLine("Removed element: " + removedElement);
+        Console.WriteLine("Size: " + cl.length());
     }
 }

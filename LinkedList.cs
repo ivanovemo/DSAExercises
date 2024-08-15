@@ -11,8 +11,8 @@ namespace LearnDSAlgorithms
 
         public LinkedList()
         {
-            head = null;
-            tail = null;
+            head = null!;
+            tail = null!;
             size = 0;
         }
 
@@ -28,7 +28,7 @@ namespace LearnDSAlgorithms
 
         public void addLast(int e)
         {
-            Node newest = new Node(e, null);
+            Node newest = new Node(e, null!);
             if (isEmpty())
             {
                 head = newest;
@@ -55,7 +55,7 @@ namespace LearnDSAlgorithms
 
         public void addFirst(int e)
         {
-            Node newest = new Node(e, null);
+            Node newest = new Node(e, null!);
             if (isEmpty())
             {
                 tail = newest;
@@ -76,7 +76,7 @@ namespace LearnDSAlgorithms
                 Console.WriteLine("Invalid Position");
                 return;
             }
-            Node newest = new Node(e, null);
+            Node newest = new Node(e, null!);
             Node p = head;
             int i = 1;
             while (i < position - 1)
@@ -104,7 +104,7 @@ namespace LearnDSAlgorithms
                 size = size - 1;
                 if (isEmpty())
                 {
-                    tail = null;
+                    tail = null!;
                 }
 
                 return e;
@@ -129,7 +129,7 @@ namespace LearnDSAlgorithms
             tail = p;
             p = p.next;
             int e = p.element;
-            tail.next = null;
+            tail.next = null!;
             size -= 1;
             return e;
         }
@@ -173,7 +173,7 @@ namespace LearnDSAlgorithms
 
         public void insertSorted(int e)
         {
-            Node newest = new Node(e, null);
+            Node newest = new Node(e, null!);
             if (isEmpty())
             {
                 head = newest;
