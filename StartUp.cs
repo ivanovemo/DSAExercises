@@ -86,11 +86,11 @@ class Executions
         cl.addLast(3);
         cl.display();
         Console.WriteLine("Size: " + cl.length());
-        cl.addFirst(30);
+        cl.addAny(20, 3);
         cl.display();
         Console.WriteLine("Size: " + cl.length());
-        cl.addFirst(40);
+        cl.addAny(30, 5);
         cl.display();
-        Console.WriteLine("Size: " + cl.length());
+        Console.WriteLine("Size: " + cl.length());        
     }
 }

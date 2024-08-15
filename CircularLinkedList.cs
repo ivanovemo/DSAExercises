@@ -8,8 +8,8 @@
 
         public CircularLinkedList()
         {
-            head = null;
-            tail = null;
+            head = null!;
+            tail = null!;
             size = 0;
         }
 
@@ -25,7 +25,7 @@
 
         public void addLast(int e)
         {
-            Node newest = new Node(e, null);
+            Node newest = new Node(e, null!);
             if (isEmpty())
             {
                 newest.next = newest;
@@ -42,7 +42,7 @@
 
         public void addFirst(int e)
         {
-            Node newest = new Node(e, null);
+            Node newest = new Node(e, null!);
             if (isEmpty())
             {
                 newest.next = newest;
@@ -55,6 +55,28 @@
                 newest.next = head;
                 head = newest;
             }
+            size += 1;
+        }
+
+        public void addAny(int e, int position)
+        {
+            if (position <= 0 || position >= size)
+            {
+                Console.WriteLine("Invalid position!");
+                return;
+            }
+
+            Node newest = new Node(e, null!);
+            Node p = head;
+            int i = 1;
+            while (i < position - 1)
+            {
+                p = p.next;
+                i += 1;
+            }
+
+            newest.next = p.next;
+            p.next = newest;
             size += 1;
         }
 
