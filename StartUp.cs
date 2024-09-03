@@ -113,7 +113,8 @@ class Executions
         dls.addLast(3);
         dls.display();
         Console.WriteLine("Size: " + dls.length());
-        dls.addAny(20, 3);
+        int removedElement = dls.removeFirst();
+        Console.WriteLine("Removed element:" + removedElement);
         dls.display();
         Console.WriteLine("Size: " + dls.length());
     }

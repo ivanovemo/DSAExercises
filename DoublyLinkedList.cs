@@ -94,6 +94,30 @@ namespace DSAExercises
             p.next = newest;
             newest .prev = p;
             size += 1;
-        }        
+        }
+
+        public int removeFirst()
+        {
+            if(isEmpty())
+            {
+                Console.WriteLine("The list is empty!");
+                return -1;
+            }
+
+            int e = head.element;
+            head = head.next!;
+            size -= 1;
+
+            if(isEmpty())
+            {
+                tail = null!;
+            }
+            else
+            {
+                head.prev = null;
+            }
+
+            return e;
+        }
     }
 }
