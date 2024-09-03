@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace DSAExercises
 {
     public class DoublyLinkedList
@@ -50,6 +52,24 @@ namespace DSAExercises
             }
 
             Console.WriteLine();
+        }
+
+        public void addFirst(int e)
+        {
+            Node newest = new Node(e, null, null);
+
+            if(isEmpty())
+            {
+                head = newest;
+                tail = newest;
+            }
+            else
+            {
+                newest.next = head;
+                head.prev = newest;
+                head = newest;
+            }
+            size += 1;
         }
     }
 }

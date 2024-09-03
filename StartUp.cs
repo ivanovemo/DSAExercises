@@ -109,10 +109,11 @@ class Executions
         dls.addLast(7);
         dls.addLast(4);
         dls.addLast(12);
-        dls.display();
-        Console.WriteLine("Size: " + dls.length());
         dls.addLast(8);
         dls.addLast(3);
+        dls.display();
+        Console.WriteLine("Size: " + dls.length());
+        dls.addFirst(15);
         dls.display();
         Console.WriteLine("Size: " + dls.length());
     }
