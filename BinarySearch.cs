@@ -9,7 +9,7 @@
 
             while (left <= right)
             {
-                int mid = (left + right) / 2; //mid = index
+                int mid = (left + right) / 2;
 
                 if (key == A[mid])
                 {
