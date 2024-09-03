@@ -71,5 +71,29 @@ namespace DSAExercises
             }
             size += 1;
         }
+
+        public void addAny(int e, int position)
+        {
+            if (position <= 0 || position >= size)
+            {
+                Console.WriteLine("Invalid position!");
+                return;
+            }
+
+            Node newest = new Node(e, null, null);
+            Node p = head;
+            int i = 1;
+
+            while (i < position - 1)
+            {
+                p = p.next!;
+                i += 1;
+            }
+            newest.next = p.next;
+            p.next!.prev = newest;
+            p.next = newest;
+            newest .prev = p;
+            size += 1;
+        }        
     }
 }

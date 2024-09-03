@@ -113,7 +113,7 @@ class Executions
         dls.addLast(3);
         dls.display();
         Console.WriteLine("Size: " + dls.length());
-        dls.addFirst(15);
+        dls.addAny(20, 3);
         dls.display();
         Console.WriteLine("Size: " + dls.length());
     }
