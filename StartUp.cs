@@ -112,9 +112,15 @@ class Executions
         dls.addLast(8);
         dls.addLast(3);
         dls.display();
+        // Console.WriteLine("Size: " + dls.length());
+        // int removedElement = dls.removeFirst();
+        // Console.WriteLine("Removed element:" + removedElement);
+        // dls.display();
+        // Console.WriteLine("Size: " + dls.length());
+
         Console.WriteLine("Size: " + dls.length());
-        int removedElement = dls.removeFirst();
-        Console.WriteLine("Removed element:" + removedElement);
+        int lastRemovedElement = dls.removeLast();
+        Console.WriteLine("Removed element:" + lastRemovedElement);
         dls.display();
         Console.WriteLine("Size: " + dls.length());
     }

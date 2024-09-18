@@ -119,5 +119,20 @@ namespace DSAExercises
 
             return e;
         }
+
+        public int removeLast()
+        {
+            if (isEmpty())
+            {
+                Console.WriteLine("Doubly list is empty!");
+                return -1;
+            }
+            int e = tail.element;
+            tail = tail.prev!;
+            tail.next = null;
+            size -= 1;
+
+            return e;
+        }
     }
 }
