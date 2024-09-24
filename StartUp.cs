@@ -131,19 +131,32 @@ class Executions
         // dls.display();
         // Console.WriteLine("Size: " + dls.length());
 
-        StacksArray sa = new StacksArray(10);
-        sa.Push(5);
-        sa.Push(3);
-        sa.Display();
-        Console.WriteLine("Size: " + sa.Length());
-        Console.WriteLine("Element popped: " + sa.Pop());
-        Console.WriteLine("Is empty: " + sa.IsEmpty());
-        Console.WriteLine("Element popped: " + sa.Pop());
-        Console.WriteLine("Is empty: " + sa.IsEmpty());
-        sa.Push(7);
-        sa.Push(9);
-        sa.Display();
-        Console.WriteLine("Top element: " + sa.Peek());
-        sa.Display();
+        // StacksArray sa = new StacksArray(10);
+        // sa.Push(5);
+        // sa.Push(3);
+        // sa.Display();
+        // Console.WriteLine("Size: " + sa.Length());
+        // Console.WriteLine("Element popped: " + sa.Pop());
+        // Console.WriteLine("Is empty: " + sa.IsEmpty());
+        // Console.WriteLine("Element popped: " + sa.Pop());
+        // Console.WriteLine("Is empty: " + sa.IsEmpty());
+        // sa.Push(7);
+        // sa.Push(9);
+        // sa.Display();
+        // Console.WriteLine("Top element: " + sa.Peek());
+        // sa.Display();
+
+        StacksLinked sl = new StacksLinked();
+        sl.Push(5);
+        sl.Push(3);
+        sl.Display();
+        Console.WriteLine("Size: " + sl.Length());
+        Console.WriteLine("Element removed: " + sl.Pop());
+        Console.WriteLine("Is empty: " + sl.IsEmpty());
+        Console.WriteLine("Element removed: " + sl.Pop());
+        Console.WriteLine("Is empty: " + sl.IsEmpty());
+        sl.Push(7);
+        sl.Push(9);
+        sl.Display();
     }
 }
