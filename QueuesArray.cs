@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using DSAExercises;
 
 namespace DSAExercises
@@ -65,7 +66,11 @@ namespace DSAExercises
         {
             for (int i = front; i < rear; i++)
             {
-                Console.Write(data[i] + "-");
+                Console.Write(data[i]);
+                if (data[i + 1] != 0)
+                {
+                    Console.Write("-");
+                }
             }
 
             Console.WriteLine();
