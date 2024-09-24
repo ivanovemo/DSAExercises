@@ -146,17 +146,32 @@ class Executions
         // Console.WriteLine("Top element: " + sa.Peek());
         // sa.Display();
 
-        StacksLinked sl = new StacksLinked();
-        sl.Push(5);
-        sl.Push(3);
-        sl.Display();
-        Console.WriteLine("Size: " + sl.Length());
-        Console.WriteLine("Element removed: " + sl.Pop());
-        Console.WriteLine("Is empty: " + sl.IsEmpty());
-        Console.WriteLine("Element removed: " + sl.Pop());
-        Console.WriteLine("Is empty: " + sl.IsEmpty());
-        sl.Push(7);
-        sl.Push(9);
-        sl.Display();
+        // StacksLinked sl = new StacksLinked();
+        // sl.Push(5);
+        // sl.Push(3);
+        // sl.Display();
+        // Console.WriteLine("Size: " + sl.Length());
+        // Console.WriteLine("Element removed: " + sl.Pop());
+        // Console.WriteLine("Is empty: " + sl.IsEmpty());
+        // Console.WriteLine("Element removed: " + sl.Pop());
+        // Console.WriteLine("Is empty: " + sl.IsEmpty());
+        // sl.Push(7);
+        // sl.Push(9);
+        // sl.Display();
+
+        QueuesArray qa = new QueuesArray(10);
+        qa.Enqueue(5);
+        qa.Enqueue(3);
+        qa.Display();
+        Console.WriteLine("Size: " + qa.Length());
+        Console.WriteLine("Element removed: " + qa.Dequeue());
+        Console.WriteLine("Is empty: " + qa.IsEmpty());
+        Console.WriteLine("Element removed: " + qa.Dequeue());
+        Console.WriteLine("Is empty: " + qa.IsEmpty());
+        qa.Enqueue(7);
+        qa.Enqueue(9);
+        qa.Enqueue(4);
+        qa.Display();
+        Console.WriteLine("Size: " + qa.Length());
     }
 }
