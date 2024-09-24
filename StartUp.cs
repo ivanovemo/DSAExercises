@@ -1,7 +1,4 @@
-﻿using System.Diagnostics.SymbolStore;
-using LearnDSAlgorithms;
-
-namespace DSAExercises;
+﻿namespace DSAExercises;
 
 class Executions
 {
@@ -174,14 +171,27 @@ class Executions
         // qa.Display();
         // Console.WriteLine("Size: " + qa.Length());
 
-        QueuesLinked ql = new QueuesLinked();
-        ql.Enqueue(5);
-        ql.Enqueue(3);
-        ql.Display();
-        Console.WriteLine("Size: " + ql.Length());
-        Console.WriteLine("Element removed: " + ql.Dequeue());
-        Console.WriteLine("Is empty: " + ql.IsEmpty());
-        Console.WriteLine("Element removed: " + ql.Dequeue());
-        Console.WriteLine("Is empty: " + ql.IsEmpty());
+        // QueuesLinked ql = new QueuesLinked();
+        // ql.Enqueue(5);
+        // ql.Enqueue(3);
+        // ql.Display();
+        // Console.WriteLine("Size: " + ql.Length());
+        // Console.WriteLine("Element removed: " + ql.Dequeue());
+        // Console.WriteLine("Is empty: " + ql.IsEmpty());
+        // Console.WriteLine("Element removed: " + ql.Dequeue());
+        // Console.WriteLine("Is empty: " + ql.IsEmpty());
+
+        DeQueLinked dql = new DeQueLinked();
+        dql.AddFirst(5);
+        dql.AddFirst(3);
+        dql.AddLast(7);
+        dql.AddLast(12);
+        dql.Display();
+        Console.WriteLine("Size: " + dql.Length());
+        Console.WriteLine("Front element removed: " + dql.RemoveFirst());
+        Console.WriteLine("Rear element removed: " + dql.RemoveLast());
+        dql.Display();
+        Console.WriteLine("First element: " + dql.First());
+        Console.WriteLine("Last element: " + dql.Last());
     }
 }

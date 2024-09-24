@@ -1,5 +1,4 @@
-﻿using System;
-namespace DSAExercises
+﻿namespace DSAExercises
 {
     public class Recursion
     {
