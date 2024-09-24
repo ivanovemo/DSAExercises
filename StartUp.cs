@@ -1,4 +1,5 @@
-﻿using LearnDSAlgorithms;
+﻿using System.Diagnostics.SymbolStore;
+using LearnDSAlgorithms;
 
 namespace DSAExercises;
 
@@ -105,13 +106,13 @@ class Executions
         // Console.WriteLine("Removed element: " + removedElement);
         // Console.WriteLine("Size: " + cl.length());
         
-        DoublyLinkedList dls = new DoublyLinkedList();
-        dls.addLast(7);
-        dls.addLast(4);
-        dls.addLast(12);
-        dls.addLast(8);
-        dls.addLast(3);
-        dls.display();
+        // DoublyLinkedList dls = new DoublyLinkedList();
+        // dls.addLast(7);
+        // dls.addLast(4);
+        // dls.addLast(12);
+        // dls.addLast(8);
+        // dls.addLast(3);
+        // dls.display();
         // Console.WriteLine("Size: " + dls.length());
         // int removedElement = dls.removeFirst();
         // Console.WriteLine("Removed element:" + removedElement);
@@ -124,10 +125,25 @@ class Executions
         // dls.display();
         // Console.WriteLine("Size: " + dls.length());
 
-        Console.WriteLine("Size: " + dls.length());
-        int removedAnyElement = dls.RemoveAny(3);
-        Console.WriteLine("Removed element:" + removedAnyElement);
-        dls.display();
-        Console.WriteLine("Size: " + dls.length());
+        // Console.WriteLine("Size: " + dls.length());
+        // int removedAnyElement = dls.RemoveAny(3);
+        // Console.WriteLine("Removed element:" + removedAnyElement);
+        // dls.display();
+        // Console.WriteLine("Size: " + dls.length());
+
+        StacksArray sa = new StacksArray(10);
+        sa.Push(5);
+        sa.Push(3);
+        sa.Display();
+        Console.WriteLine("Size: " + sa.Length());
+        Console.WriteLine("Element popped: " + sa.Pop());
+        Console.WriteLine("Is empty: " + sa.IsEmpty());
+        Console.WriteLine("Element popped: " + sa.Pop());
+        Console.WriteLine("Is empty: " + sa.IsEmpty());
+        sa.Push(7);
+        sa.Push(9);
+        sa.Display();
+        Console.WriteLine("Top element: " + sa.Peek());
+        sa.Display();
     }
 }
