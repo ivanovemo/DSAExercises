@@ -11,6 +11,71 @@ public class BinarySearchTree
         root = null!;
     }
 
+    public bool Delete(int e)
+    {
+        BinarySearchTreeNode p = root;
+        BinarySearchTreeNode pp = null!;
+
+        while (p != null && p.element != e)
+        {
+            pp = p;
+            if (e < p.element)
+            {
+                p = p.left;
+            }
+            else
+            {
+                p = p.right;
+            }
+        }
+
+        if (p == null)
+        {
+            return false;
+        }
+        if (p.left != null && p.right != null)
+        {
+            BinarySearchTreeNode s = p.left;
+            BinarySearchTreeNode ps = p;
+
+            while (s.right != null)
+            {
+                ps = s;
+                s = s.right;
+            }
+            p.element = s.element;
+            p = s;
+            pp = ps;
+        }
+        BinarySearchTreeNode c = null!;
+
+        if (p.left != null)
+        {
+            c = p.left;
+        }
+        else
+        {
+            c = p.right!;
+        }
+        if (p == root)
+        {
+            root = null!;
+        }
+        else
+        {
+            if (p == pp.left)
+            {
+                pp.left = c;
+            }
+            else
+            {
+                pp.right = c;
+            }
+        }
+
+        return true;
+    }
+
     public bool RecursiveSearch(BinarySearchTreeNode tempRoot, int key)
     {
         if (tempRoot != null)
@@ -165,5 +230,16 @@ public class BinarySearchTree
             Console.Write(temproot.element + " ");
             Inorder(temproot.right);
         }
+    }
+
+    public int Count (BinarySearchTreeNode temproot)
+    {
+        if (temproot != null) {
+            int x = Count(temproot.left);
+            int y = Count(temproot.right);
+            return x + y + 1;
+        }
+
+        return 0;
     }
 }
