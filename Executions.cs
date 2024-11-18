@@ -18,19 +18,27 @@ class Executions
         rec.calculateIterative(4);
         rec.calculateRecursive(4);
 
+        Console.WriteLine();
+
         SumOfNumbers sum = new SumOfNumbers();
         Console.WriteLine("Sum: " + sum.sumOfNNumbers(5));
         Console.WriteLine("Sum: " + sum.sumIteration(5));
         Console.WriteLine("Sum: " + sum.sumRecursion(5));
 
+        Console.WriteLine();
+
         Factorial fact = new Factorial();
         Console.WriteLine("Factorial: " + fact.factorialIterative(5));
         Console.WriteLine("Factorial: " + fact.factorialRecursive(5));
+
+        Console.WriteLine();
 
         Search search = new Search();
         int[] A = { 84, 21, 47, 96, 15 };
         Console.WriteLine("Result: " + search.linearSearch(A, 5, 96));
         Console.WriteLine("Result: " + search.linearSearch(A, 5, 100));
+
+        Console.WriteLine();
 
         BinarySearch bs = new BinarySearch();
         int[] B = { 15, 21, 47, 84, 96 };
@@ -40,6 +48,8 @@ class Executions
         Console.WriteLine("Result: " + bs.binarySearchRecursive(B, 96, 0, 4));
         Console.WriteLine("Result: " + bs.binarySearchRecursive(B, 21, 0, 4));
         Console.WriteLine("Result: " + bs.binarySearchRecursive(B, 100, 0, 4));
+
+        Console.WriteLine();
 
         Sort s = new Sort();
         int[] C = { 3, 5, 8, 9, 6, 2 };
@@ -86,6 +96,8 @@ class Executions
         l.insertSorted(3);
         l.display();
 
+        Console.WriteLine();
+
         CircularLinkedList cl = new CircularLinkedList();
         cl.addLast(7);
         cl.addLast(4);
@@ -113,6 +125,8 @@ class Executions
         Console.WriteLine("Removed element: " + removedElement);
         Console.WriteLine("Size: " + cl.length());
         
+        Console.WriteLine();
+
         DoublyLinkedList dls = new DoublyLinkedList();
         dls.addLast(7);
         dls.addLast(4);
@@ -126,17 +140,23 @@ class Executions
         dls.display();
         Console.WriteLine("Size: " + dls.length());
 
+        Console.WriteLine();
+
         Console.WriteLine("Size: " + dls.length());
         int lastRemovedEl = dls.removeLast();
         Console.WriteLine("Removed element:" + lastRemovedEl);
         dls.display();
         Console.WriteLine("Size: " + dls.length());
 
+        Console.WriteLine();
+
         Console.WriteLine("Size: " + dls.length());
         int removedAnyElement = dls.RemoveAny(3);
         Console.WriteLine("Removed element:" + removedAnyElement);
         dls.display();
         Console.WriteLine("Size: " + dls.length());
+
+        Console.WriteLine();
 
         StacksArray sa = new StacksArray(10);
         sa.Push(5);
@@ -153,6 +173,8 @@ class Executions
         Console.WriteLine("Top element: " + sa.Peek());
         sa.Display();
 
+        Console.WriteLine();
+
         StacksLinked sl = new StacksLinked();
         sl.Push(5);
         sl.Push(3);
@@ -165,6 +187,8 @@ class Executions
         sl.Push(7);
         sl.Push(9);
         sl.Display();
+
+        Console.WriteLine();
 
         QueuesArray qa = new QueuesArray(10);
         qa.Enqueue(5);
@@ -181,6 +205,8 @@ class Executions
         qa.Display();
         Console.WriteLine("Size: " + qa.Length());
 
+        Console.WriteLine();
+
         QueuesLinked ql = new QueuesLinked();
         ql.Enqueue(5);
         ql.Enqueue(3);
@@ -190,6 +216,8 @@ class Executions
         Console.WriteLine("Is empty: " + ql.IsEmpty());
         Console.WriteLine("Element removed: " + ql.Dequeue());
         Console.WriteLine("Is empty: " + ql.IsEmpty());
+
+        Console.WriteLine();
 
         DeQueLinked dql = new DeQueLinked();
         dql.AddFirst(5);
@@ -204,6 +232,8 @@ class Executions
         Console.WriteLine("First element: " + dql.First());
         Console.WriteLine("Last element: " + dql.Last());
 
+        Console.WriteLine();
+
         BinarySearchTree bstB = new BinarySearchTree();
         bstB.Insert(bstB.root, 50);
         bstB.Insert(bstB.root, 30);
@@ -214,6 +244,7 @@ class Executions
         bstB.Insert(bstB.root, 90);
         Console.WriteLine("Inorder Traversal");
         bstB.Inorder(bstB.root);
+
         Console.WriteLine();
 
         BinarySearchTree bstC = new BinarySearchTree();
@@ -227,6 +258,10 @@ class Executions
         Console.WriteLine("Inorder Traversal");
         bstC.Inorder(bstC.root);
         Console.WriteLine();
+        bstC.Delete(50);
+        Console.WriteLine("Inorder Traversal after delete");
+        bstC.Inorder(bstC.root);
+        Console.WriteLine();
         Console.WriteLine("Preorder Traversal");
         bstC.Preorder(bstC.root);
         Console.WriteLine();
@@ -235,6 +270,7 @@ class Executions
         Console.WriteLine();
         Console.WriteLine("Level order Traversal");
         bstC.Levelorder();
+        
         Console.WriteLine();
 
         Console.WriteLine("Search result: " + bstC.Search(60));
