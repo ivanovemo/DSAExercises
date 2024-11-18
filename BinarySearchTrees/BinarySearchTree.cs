@@ -126,7 +126,7 @@ public class BinarySearchTree
         Console.Write(t.element + " ");
         q.Enqueue(t);
 
-        while(!q.IsEmpty())
+        while (!q.IsEmpty())
         {
             t = (BinarySearchTreeNode)q.Dequeue();
             if (t.left != null)
@@ -164,7 +164,7 @@ public class BinarySearchTree
 
     public BinarySearchTreeNode RecursiveInsert(BinarySearchTreeNode tempRoot, int e)
     {
-        if (tempRoot != null) 
+        if (tempRoot != null)
         {
             if (e < tempRoot.element)
             {
@@ -232,9 +232,10 @@ public class BinarySearchTree
         }
     }
 
-    public int Count (BinarySearchTreeNode temproot)
+    public int Count(BinarySearchTreeNode temproot)
     {
-        if (temproot != null) {
+        if (temproot != null)
+        {
             int x = Count(temproot.left);
             int y = Count(temproot.right);
             return x + y + 1;

@@ -124,7 +124,7 @@ class Executions
         cl.display();
         Console.WriteLine("Removed element: " + removedElement);
         Console.WriteLine("Size: " + cl.length());
-        
+
         Console.WriteLine();
 
         DoublyLinkedList dls = new DoublyLinkedList();
@@ -270,11 +270,11 @@ class Executions
         Console.WriteLine();
         Console.WriteLine("Level order Traversal");
         bstC.Levelorder();
-        
         Console.WriteLine();
-
         Console.WriteLine("Search result: " + bstC.Search(60));
-        
+        Console.WriteLine();
         Console.WriteLine("Recursive search result: " + bstC.RecursiveSearch(bstC.root, 60));
+        Console.WriteLine();
+        Console.WriteLine("Number of node: " + bstC.Count(bstC.root));
     }
 }
