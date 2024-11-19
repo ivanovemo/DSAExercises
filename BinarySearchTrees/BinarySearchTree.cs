@@ -243,4 +243,23 @@ public class BinarySearchTree
 
         return 0;
     }
+
+    public int FindHeight(BinarySearchTreeNode temproot)
+    {
+        if (temproot != null)
+        {
+            int x = FindHeight(temproot.left);
+            int y = FindHeight(temproot.right);
+            if (x > y)
+            {
+                return x + 1;
+            }
+            else
+            {
+                return y + 1;
+            }
+        }
+
+        return 0;
+    }
 }

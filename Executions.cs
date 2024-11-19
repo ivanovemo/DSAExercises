@@ -258,7 +258,7 @@ class Executions
         Console.WriteLine("Inorder Traversal");
         bstC.Inorder(bstC.root);
         Console.WriteLine();
-        bstC.Delete(50);
+        // bstC.Delete(50);
         Console.WriteLine("Inorder Traversal after delete");
         bstC.Inorder(bstC.root);
         Console.WriteLine();
@@ -272,9 +272,8 @@ class Executions
         bstC.Levelorder();
         Console.WriteLine();
         Console.WriteLine("Search result: " + bstC.Search(60));
-        Console.WriteLine();
         Console.WriteLine("Recursive search result: " + bstC.RecursiveSearch(bstC.root, 60));
-        Console.WriteLine();
         Console.WriteLine("Number of node: " + bstC.Count(bstC.root));
+        Console.WriteLine("Binary tree height: " + (bstC.FindHeight(bstC.root) -1));
     }
 }
