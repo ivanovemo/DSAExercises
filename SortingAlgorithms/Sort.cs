@@ -2,7 +2,7 @@
 
 public class Sort
 {
-    public void selectionSort(int[] A, int n)
+    public void SelectionSort(int[] A, int n)
     {
         for (int i = 0; i < n - 1; i++)
         {
@@ -10,7 +10,7 @@ public class Sort
         }
     }
 
-    public void insertionSort(int[] A, int n)
+    public void InsertionSort(int[] A, int n)
     {
         for (int i = 0; i < n; i++)
         {
@@ -26,7 +26,7 @@ public class Sort
         }
     }
 
-    public void bubbleSort(int[] A, int n)
+    public void BubbleSort(int[] A, int n)
     {
         for (int pass = n - 1; pass >= 0; pass--)
         {
@@ -42,7 +42,7 @@ public class Sort
         }
     }
 
-    public void shellSort(int[] A, int n)
+    public void ShellSort(int[] A, int n)
     {
         int gap = n / 2;
         while (gap > 0)
@@ -64,18 +64,18 @@ public class Sort
         }
     }
 
-    public void mergeSort(int[] A, int left, int right)
+    public void MergeSort(int[] A, int left, int right)
     {
         if (left < right)
         {
             int mid = (left + right) / 2;
-            mergeSort(A, left, mid);
-            mergeSort(A, mid + 1, right);
-            merge(A, left, mid, right);
+            MergeSort(A, left, mid);
+            MergeSort(A, mid + 1, right);
+            Merge(A, left, mid, right);
         }
     }
 
-    public void merge(int[] A, int left, int mid, int right)
+    public void Merge(int[] A, int left, int mid, int right)
     {
         int i = left;
         int j = mid + 1;
@@ -113,17 +113,17 @@ public class Sort
         }
     }
 
-    public void quickSort(int[] A, int low, int high)
+    public void QuickSort(int[] A, int low, int high)
     {
         if (low < high)
         {
-            int pi = partition(A, low, high);
-            quickSort(A, low, pi - 1);
-            quickSort(A, pi + 1, high);
+            int pi = Partition(A, low, high);
+            QuickSort(A, low, pi - 1);
+            QuickSort(A, pi + 1, high);
         }
     }
 
-    public int partition(int[] A, int low, int high)
+    public int Partition(int[] A, int low, int high)
     {
         int pivot = A[low];
         int i = low + 1;
@@ -140,21 +140,21 @@ public class Sort
             }
             if (i <= j)
             {
-                swap(A, i, j);
+                Swap(A, i, j);
             }
         } while (i < j);
-        swap(A, low, j);
+        Swap(A, low, j);
         return j;
     }
 
-    public void swap(int[] A, int i, int j)
+    public void Swap(int[] A, int i, int j)
     {
         int temp = A[i];
         A[i] = A[j];
         A[j] = temp;
     }
 
-    public void display(int[] A, int n)
+    public void Display(int[] A, int n)
     {
         for (int i = 0; i < n; i++)
         {

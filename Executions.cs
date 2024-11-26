@@ -55,39 +55,39 @@ class Executions
         Sort s = new Sort();
         int[] C = { 3, 5, 8, 9, 6, 2 };
         Console.WriteLine("Original array: ");
-        s.display(C, 6);
-        s.insertionSort(C, 6);
+        s.Display(C, 6);
+        s.InsertionSort(C, 6);
 
         Console.WriteLine("Sorted array: ");
-        s.display(C, 6);
+        s.Display(C, 6);
 
         Console.WriteLine("Original array: ");
-        s.display(C, 6);
-        s.bubbleSort(C, 6);
+        s.Display(C, 6);
+        s.BubbleSort(C, 6);
 
         Console.WriteLine("Sorted array: ");
-        s.display(C, 6);
+        s.Display(C, 6);
 
         Console.WriteLine("Original array: ");
-        s.display(C, 6);
-        s.bubbleSort(C, 6);
+        s.Display(C, 6);
+        s.BubbleSort(C, 6);
 
         Console.WriteLine("Sorted array: ");
-        s.display(C, 6);
+        s.Display(C, 6);
 
         Console.WriteLine("Original array:");
-        s.display(C, 6);
-        s.mergeSort(C, 0, 5);
+        s.Display(C, 6);
+        s.MergeSort(C, 0, 5);
 
         Console.WriteLine("Sorted array:");
-        s.display(C, 6);
+        s.Display(C, 6);
 
         Console.WriteLine("Original array: ");
-        s.display(C, 6);
-        s.quickSort(C, 0, C.Length - 1);
+        s.Display(C, 6);
+        s.QuickSort(C, 0, C.Length - 1);
 
         Console.WriteLine("Sorted array: ");
-        s.display(C, 6);
+        s.Display(C, 6);
 
         LinkedList l = new LinkedList();
         l.insertSorted(7);
