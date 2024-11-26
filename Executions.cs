@@ -1,6 +1,7 @@
 ﻿using DSAExercises.BinarySearchTrees;
 using DSAExercises.CircularLinkedLists;
 using DSAExercises.DoublyLinkedLists;
+using DSAExercises.Heaps;
 using DSAExercises.LinkedLists;
 using DSAExercises.Queues;
 using DSAExercises.Recursive;
@@ -275,5 +276,16 @@ class Executions
         Console.WriteLine("Recursive search result: " + bstC.RecursiveSearch(bstC.root, 60));
         Console.WriteLine("Number of node: " + bstC.Count(bstC.root));
         Console.WriteLine("Binary tree height: " + (bstC.FindHeight(bstC.root) -1));
+
+        Heap h = new Heap();
+        h.Insert(25);
+        h.Insert(14);
+        h.Insert(2);
+        h.Insert(20);
+        h.Insert(10);
+        h.Insert(40);
+        h.Display();
+        int element = h.DeleteMax();
+        Console.WriteLine("Element deleted: " + element);
     }
 }
