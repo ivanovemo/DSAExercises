@@ -287,5 +287,12 @@ class Executions
         h.Display();
         int element = h.DeleteMax();
         Console.WriteLine("Element deleted: " + element);
+
+        int[] heapArray = { 63, 25, 835, 947, 651, 28 };
+        Console.WriteLine("Original array:");
+        h.DisplayArray(heapArray, 6);
+        h.Sort(heapArray, 6);
+        Console.WriteLine("Sorted array:");
+        h.DisplayArray(heapArray, 6);
     }
 }

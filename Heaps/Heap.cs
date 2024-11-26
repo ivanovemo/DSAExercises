@@ -96,4 +96,28 @@ class Heap {
 
         return element;
     }
+
+    public void Sort(int[] A, int n)
+    {
+        Heap h = new Heap();
+        for (int i = 0; i < n; i++)
+        {
+            h.Insert(A[i]);
+        }
+        int k = n - 1;
+        for (int i = 0; i < n; i++)
+        {
+            A[k] = h.DeleteMax();
+            k -= 1;
+        }
+    }
+
+    public void DisplayArray(int[] A, int n )
+    {
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write(A[i] + " ");
+        }
+        Console.WriteLine();
+    }
 }
