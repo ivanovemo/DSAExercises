@@ -15,20 +15,20 @@ class LinkedList
         size = 0;
     }
 
-    public int length()
+    public int Length()
     {
         return size;
     }
 
-    public bool isEmpty()
+    public bool IsEmpty()
     {
         return size == 0;
     }
 
-    public void addLast(int e)
+    public void AddLast(int e)
     {
         Node newest = new Node(e, null!);
-        if (isEmpty())
+        if (IsEmpty())
         {
             head = newest;
         }
@@ -41,7 +41,7 @@ class LinkedList
         size = size + 1;
     }
 
-    public void display()
+    public void Display()
     {
         Node p = head;
         while (p != null)
@@ -52,10 +52,10 @@ class LinkedList
         Console.WriteLine();
     }
 
-    public void addFirst(int e)
+    public void AddFirst(int e)
     {
         Node newest = new Node(e, null!);
-        if (isEmpty())
+        if (IsEmpty())
         {
             tail = newest;
         }
@@ -68,7 +68,7 @@ class LinkedList
         size += 1;
     }
 
-    public void addAny(int e, int position)
+    public void AddAny(int e, int position)
     {
         if (position <= 0 || position >= size)
         {
@@ -89,9 +89,9 @@ class LinkedList
         size = size + 1;
     }
 
-    public int removeFirst()
+    public int RemoveFirst()
     {
-        if (isEmpty())
+        if (IsEmpty())
         {
             Console.WriteLine("List is empty!");
             return -1;
@@ -101,7 +101,7 @@ class LinkedList
             int e = head.element;
             head = head.next!;
             size = size - 1;
-            if (isEmpty())
+            if (IsEmpty())
             {
                 tail = null!;
             }
@@ -110,9 +110,9 @@ class LinkedList
         }
     }
 
-    public int removeLast()
+    public int RemoveLast()
     {
-        if (isEmpty())
+        if (IsEmpty())
         {
             Console.WriteLine("List is empty!");
             return -1;
@@ -132,7 +132,7 @@ class LinkedList
         size -= 1;
         return e;
     }
-    public int removeAny(int position)
+    public int RemoveAny(int position)
     {
         if (position <= 0 || position >= size - 1)
         {
@@ -152,7 +152,7 @@ class LinkedList
         return e;
     }
 
-    public int search(int key)
+    public int Search(int key)
     {
         Node p = head;
         int index = 0;
@@ -170,10 +170,10 @@ class LinkedList
         return -1;
     }
 
-    public void insertSorted(int e)
+    public void InsertSorted(int e)
     {
         Node newest = new Node(e, null!);
-        if (isEmpty())
+        if (IsEmpty())
         {
             head = newest;
         }

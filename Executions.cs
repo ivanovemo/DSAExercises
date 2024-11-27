@@ -1,6 +1,7 @@
 ﻿using DSAExercises.BinarySearchTrees;
 using DSAExercises.CircularLinkedLists;
 using DSAExercises.DoublyLinkedLists;
+using DSAExercises.Hashes;
 using DSAExercises.Heaps;
 using DSAExercises.LinkedLists;
 using DSAExercises.Queues;
@@ -90,12 +91,12 @@ class Executions
         s.Display(C, 6);
 
         LinkedList l = new LinkedList();
-        l.insertSorted(7);
-        l.insertSorted(4);
-        l.insertSorted(12);
-        l.insertSorted(8);
-        l.insertSorted(3);
-        l.display();
+        l.InsertSorted(7);
+        l.InsertSorted(4);
+        l.InsertSorted(12);
+        l.InsertSorted(8);
+        l.InsertSorted(3);
+        l.Display();
 
         Console.WriteLine();
 
@@ -277,22 +278,50 @@ class Executions
         Console.WriteLine("Number of node: " + bstC.Count(bstC.root));
         Console.WriteLine("Binary tree height: " + (bstC.FindHeight(bstC.root) -1));
 
-        Heap h = new Heap();
-        h.Insert(25);
-        h.Insert(14);
-        h.Insert(2);
-        h.Insert(20);
-        h.Insert(10);
-        h.Insert(40);
-        h.Display();
-        int element = h.DeleteMax();
+        Heap heap = new Heap();
+        heap.Insert(25);
+        heap.Insert(14);
+        heap.Insert(2);
+        heap.Insert(20);
+        heap.Insert(10);
+        heap.Insert(40);
+        heap.Display();
+        int element = heap.DeleteMax();
         Console.WriteLine("Element deleted: " + element);
 
         int[] heapArray = { 63, 25, 835, 947, 651, 28 };
         Console.WriteLine("Original array:");
-        h.DisplayArray(heapArray, 6);
-        h.Sort(heapArray, 6);
+        heap.DisplayArray(heapArray, 6);
+        heap.Sort(heapArray, 6);
         Console.WriteLine("Sorted array:");
-        h.DisplayArray(heapArray, 6);
+        heap.DisplayArray(heapArray, 6);
+
+        Console.WriteLine();
+
+        HashChain hashChain = new HashChain();
+        hashChain.Insert(54);
+        hashChain.Insert(78);
+        hashChain.Insert(64);
+        hashChain.Insert(92);
+        hashChain.Insert(34);
+        hashChain.Insert(86);
+        hashChain.Insert(28);
+        hashChain.Display();
+        Console.WriteLine("Element Found: " + hashChain.Search(64));
+        Console.WriteLine("Element Found: " + hashChain.Search(44));
+
+        Console.WriteLine();
+
+        HashLinearProbe hashLinearProbe = new HashLinearProbe();
+        hashLinearProbe.Insert(54);
+        hashLinearProbe.Insert(78);
+        hashLinearProbe.Insert(64);
+        hashLinearProbe.Insert(92);
+        hashLinearProbe.Insert(34);
+        hashLinearProbe.Insert(86);
+        hashLinearProbe.Insert(28);
+        hashLinearProbe.Display();
+        Console.WriteLine("Element found: " + hashLinearProbe.Search(64));
+        Console.WriteLine("Element found: " + hashLinearProbe.Search(44));
     }
 }
