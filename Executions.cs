@@ -1,6 +1,7 @@
 ﻿using DSAExercises.BinarySearchTrees;
 using DSAExercises.CircularLinkedLists;
 using DSAExercises.DoublyLinkedLists;
+using DSAExercises.Graphs;
 using DSAExercises.Hashes;
 using DSAExercises.Heaps;
 using DSAExercises.LinkedLists;
@@ -323,5 +324,35 @@ class Executions
         hashLinearProbe.Display();
         Console.WriteLine("Element found: " + hashLinearProbe.Search(64));
         Console.WriteLine("Element found: " + hashLinearProbe.Search(44));
+
+        Console.WriteLine();
+
+        Graph graph = new Graph(4);
+        Console.WriteLine("Graphs Adjacency Matrix:");
+        graph.Display();
+        Console.WriteLine("Vertices count: " + graph.VertexCount());
+        Console.WriteLine("Edges count: " + graph.EdgeCount());
+        graph.InsertEdge(0, 1, 1);
+        graph.InsertEdge(0, 2, 1);
+        graph.InsertEdge(1, 0, 1);
+        graph.InsertEdge(1, 2, 1);
+        graph.InsertEdge(2, 0, 1);
+        graph.InsertEdge(2, 1, 1);
+        graph.InsertEdge(2, 3, 1);
+        graph.InsertEdge(3, 2, 1);
+        Console.WriteLine("Graphs Adjacency Matrix:");
+        graph.Display();
+        Console.WriteLine("Vertices count: " + graph.VertexCount());
+        Console.WriteLine("Edges count: " + graph.EdgeCount());
+        graph.Edges();
+        Console.WriteLine("Edge between 1--3: " + graph.ExistEdge(1, 3));
+        Console.WriteLine("Edge between 1--2: " + graph.ExistEdge(1, 2));
+        Console.WriteLine("Degree of vertex 2: " + graph.InDegree(2) + "");
+        Console.WriteLine("Graphs Adjacency Matrix:");
+        graph.Display();
+        graph.RemoveEdge(1, 2);
+        Console.WriteLine("Graphs Adjacency Matrix:");
+        graph.Display();
+        Console.WriteLine("Edge between 1--2: " + graph.ExistEdge(1, 2));
     }
 }
