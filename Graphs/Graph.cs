@@ -1,3 +1,5 @@
+using DSAExercises.Queues;
+
 namespace DSAExercises.Graphs;
 
 class Graph {
@@ -99,6 +101,29 @@ class Graph {
             }
 
             Console.WriteLine();
+        }
+    }
+
+    public void BFS(int s)
+    {
+        int i = s;
+        QueuesLinked ql = new QueuesLinked();
+        int[] visited = new int[vertices];
+        Console.Write(i + " ");
+        visited[i] = 1;
+        ql.Enqueue(i);
+        while (!ql.IsEmpty())
+        {
+            i = ql.Dequeue();
+            for (int j = 0; j < vertices; j++)
+            {
+                if (adjMat[i, j] == 1 && visited[j] == 0)
+                {
+                    Console.Write(j + " ");
+                    visited[j] = 1;
+                    ql.Enqueue(j);
+                }
+            }
         }
     }
 }
