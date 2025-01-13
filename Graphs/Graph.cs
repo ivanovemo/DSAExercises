@@ -38,7 +38,7 @@ class Graph {
         {
             for (int j = 0; j < vertices; j++)
             {
-                if (adjMat[i,  j] !=  0)
+                if (adjMat[i, j] != 0)
                 {
                     count ++;
                 }
