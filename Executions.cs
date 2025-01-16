@@ -355,6 +355,33 @@ class Executions
         fourGraph.Display();
         Console.WriteLine("Edge between 1--2: " + fourGraph.ExistEdge(1, 2));
 
+        Graph weightedGraph = new Graph(4);
+        Console.WriteLine("Graphs Adjacency Matrix:");
+        weightedGraph.Display();
+        Console.WriteLine("Vertices count: " + weightedGraph.VertexCount());
+        Console.WriteLine("Edges count: " + weightedGraph.EdgeCount());
+        weightedGraph.InsertEdge(0, 1, 26);
+        weightedGraph.InsertEdge(0, 2, 16);
+        weightedGraph.InsertEdge(1, 2, 12);
+        weightedGraph.InsertEdge(2, 3, 8);
+        Console.WriteLine("Graphs Adjacency Matrix:");
+        weightedGraph.Display();
+        Console.WriteLine("Vertices count: " + weightedGraph.VertexCount());
+        Console.WriteLine("Edges count: " + weightedGraph.EdgeCount());
+        weightedGraph.Edges();
+        Console.WriteLine("Edge between 1--3: " + weightedGraph.ExistEdge(1, 3));
+        Console.WriteLine("Edge between 1--2: " + weightedGraph.ExistEdge(1, 2));
+        Console.WriteLine("Edge between 2--1: " + weightedGraph.ExistEdge(2, 1));
+        Console.WriteLine("Degree of vertex 2: " + (weightedGraph.InDegree(2) + weightedGraph.OutDegree(2)));
+        Console.WriteLine("In-Degree of Vertex 2: " + weightedGraph.InDegree(2));
+        Console.WriteLine("Out-Degree of Vertex 2: " + weightedGraph.OutDegree(2));
+        Console.WriteLine("Graphs Adjacency Matrix:");
+        weightedGraph.Display();
+        weightedGraph.RemoveEdge(1, 2);
+        Console.WriteLine("Graphs Adjacency Matrix:");
+        weightedGraph.Display();
+        Console.WriteLine("Edge between 1--2: " + weightedGraph.ExistEdge(1, 2));
+
         Graph sevenGraph = new Graph(7);
         sevenGraph.InsertEdge(0, 1, 1);
         sevenGraph.InsertEdge(0, 5, 1);
@@ -374,5 +401,9 @@ class Executions
         Console.WriteLine();
         Console.WriteLine("Breadth first search:");
         sevenGraph.BFS(0);
+        
+        Console.WriteLine();
+        Console.WriteLine("Depth first search:");
+        sevenGraph.DFS(0);
     }
 }

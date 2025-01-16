@@ -5,10 +5,13 @@ namespace DSAExercises.Graphs;
 class Graph {
     int vertices;
     int[,] adjMat;
+    int[] visited;
+
     public Graph(int n)
     {
         vertices = n;
         adjMat = new int[n, n];
+        visited = new int[vertices];
     }
 
     public void InsertEdge(int u, int v, int x)
@@ -122,6 +125,22 @@ class Graph {
                     Console.Write(j + " ");
                     visited[j] = 1;
                     ql.Enqueue(j);
+                }
+            }
+        }
+    }
+
+    public void DFS(int s)
+    {
+        if (visited[s] == 0)
+        {
+            Console.Write(s + " ");
+            visited[s] = 1;
+            for (int j = 0; j < vertices; j++)
+            {
+                if (adjMat[s, j] == 1 && visited[j] == 0)
+                {
+                    DFS(j);
                 }
             }
         }
